@@ -1,21 +1,21 @@
-better-time-picker
+better-day-picker
 ==================
 
-Angular Time Picker
+Angular Day Picker
 
     <html>
     ...
-    <link href="better-time-picker.css" rel="stylesheet" type="text/css" media="all">
+    <link href="better-day-picker.css" rel="stylesheet" type="text/css" media="all">
 
     ...
 
-    <better-time-picker date="dateModel.date"></better-time-picker>
+    <better-day-picker date="dateModel.date"></better-day-picker>
 
     ...
 
     <script src="angular.js"></script>
-    <script src="betterTimePicker.js"></script>
+    <script src="betterDayPicker.js"></script>
 
     ...
 
-    angular.module('someApp', ['betterTimePicker']);
+    angular.module('someApp', ['betterDayPicker']);
