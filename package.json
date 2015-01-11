@@ -1,0 +1,32 @@
+{
+  "name": "better-day-picker",
+  "description": "Day picker directive",
+  "version": "0.1.0",
+  "author": "Paul Beauchamp",
+  "contributors": [
+    "Paul Beauchamp"
+  ],
+  "license": "MIT",
+  "repository": "paulb896/better-day-picker",
+  "homepage": "http://paulb896.github.io/better-day-picker/",
+  "keywords": [
+    "angular",
+    "day",
+    "date",
+    "picker",
+    "directive"
+  ],
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  },
+  "files": [
+    "README.md",
+    "betterDayPicker",
+    "betterDayPicker.js",
+    "betterDayPicker.css",
+    "index.html"
+  ]
+}

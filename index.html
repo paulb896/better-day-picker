@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-CA" ng-app="exampleApp">
+<head>
+  <meta charset="utf-8" />
+  <title>Better Angular Time Picker</title>
+  <meta name="description" content="Angular Better Day Picker" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href="better-day-picker.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body style="padding-left:200px; padding-top: 10px;">
+  <header style="margin-bottom:30px; margin-right:100px; float:right">
+    <h1 style="font-weight:100">Better Day Picker</h1>
+    <a style="text-decoration:none" href="https://github.com/paulb896/better-day-picker">Source on GitHub</a>
+  </header>
+  <div ng-controller="exampleDayPicker" ng-init="initDate()">
+    <div ng-bind="dateModel.date | date:'fullDate'"></div>
+    <better-day-picker selected-date="dateModel.date"></better-day-picker>
+  </div>
+  <pre style="width:50%; display:inline;"><code>
+    > bower install
+
+    &lt;link href="better-day-picker.css" rel="stylesheet" type="text/css" media="all" /&gt;
+
+    &lt;script src="angular.js"&gt;&lt;/script&gt;
+    &lt;script src="exampleDayPicker.js"&gt;&lt;/script&gt;
+    angular.module('someApp', ['betterDayPicker']);
+
+    &lt;better-day-picker date="dateModel.date"&gt;&lt;better-day-picker&gt;
+  </code></pre>
+  <script src="angular.js"></script>
+  <script src="betterDayPicker.js"></script>
+    <script>
+    (function() {
+      var module = this;
+      module.controller('exampleDayPicker', function($scope, $interval) {
+        $scope.initDate = function() {
+          $scope.dateModel = {
+            date: new Date()
+          };
+        };
+      });
+    }).call(angular.module('exampleApp', ['betterDayPicker']));
+  </script>
+  <script type="text/ng-template" id="better-day-picker.html">
+    <div class="calendar">
+      <div class="month-picker">
+        <span
+          ng-class="{'month-selected':month.name==betterDayPicker.month}"
+          ng-repeat="month in betterDayPicker.months" ng-click="betterDayPicker.setMonth(month.monthNumber)">
+            {{month.name}}
+            <span class="month-name">{{month.fullName}}</span>
+        </span>
+      </div>
+      <div class="day-picker">
+        <span
+          class="dayOfMonth"
+          ng-repeat="day in betterDayPicker.days"
+          ng-class="{'day-selected': day.name==betterDayPicker.day}"
+          ng-click="betterDayPicker.updateSelectedDay(day.name)">{{day.name}}
+        </span>
+      </div>
+    </div>
+  </script>
+</body>
+</html>

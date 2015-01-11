@@ -1,0 +1,18 @@
+<div class="calendar">
+  <div class="month-picker">
+    <span
+      ng-class="{'month-selected':month.name==betterDayPicker.month}"
+      ng-repeat="month in betterDayPicker.months" ng-click="betterDayPicker.setMonth(month.monthNumber)">
+        {{month.name}}
+        <span class="month-name">{{month.fullName}}</span>
+    </span>
+  </div>
+  <div class="day-picker">
+    <span
+      class="dayOfMonth"
+      ng-repeat="day in betterDayPicker.days"
+      ng-class="{'day-selected': day.name==betterDayPicker.day}"
+      ng-click="betterDayPicker.updateSelectedDay(day.name)">{{day.name}}
+    </span>
+  </div>
+</div>
