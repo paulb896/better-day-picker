@@ -17,11 +17,9 @@
     "directive"
   ],
   "dependencies": {
-
+    "bower": "^1.3.12"
   },
-  "devDependencies": {
-
-  },
+  "devDependencies": {},
   "files": [
     "README.md",
     "betterDayPicker",

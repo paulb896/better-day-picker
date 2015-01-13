@@ -1,0 +1,8 @@
+{
+  "name": "better-day-picker",
+  "version": "1.0.0",
+  "main": "betterDayPicker.js",
+  "dependencies": {
+    "angular": "1.3.0"
+  }
+}

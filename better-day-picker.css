@@ -89,6 +89,7 @@
     padding: 2px 10px 0 5px;
     margin-left: 3px;
     height: 30px;
+    width:20px;
 }
 
 .month-picker > span:hover{
@@ -97,25 +98,22 @@
 
 .month-picker > span:not(.month-selected){
     color: #000000;
-    border: solid transparent 1px;
-    width: 20px;
+    #border: solid transparent 1px;
+    #width: 20px;
 }
 
 .month-selected{
-    width: 20px;
     color: rgba(111,1,1,0.9);
     cursor: pointer;
-    font-weight: 900;
-    margin:0px;
-    height:80px;
 }
 
 .month-name{
-    display: none;
+    font-size:22px;
+    color:transparent;
 }
 
 .month-selected > span{
-    display: block;
+    color: red;
 }
 
 .month-picker > span:not(.month-selected):hover{

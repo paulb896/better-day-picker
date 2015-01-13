@@ -21,13 +21,13 @@
 
     &lt;link href="better-day-picker.css" rel="stylesheet" type="text/css" media="all" /&gt;
 
-    &lt;script src="angular.js"&gt;&lt;/script&gt;
+    &lt;script src="bower_components/angular/angular.js"&gt;&lt;/script&gt;
     &lt;script src="exampleDayPicker.js"&gt;&lt;/script&gt;
     angular.module('someApp', ['betterDayPicker']);
 
     &lt;better-day-picker date="dateModel.date"&gt;&lt;better-day-picker&gt;
   </code></pre>
-  <script src="angular.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
   <script src="betterDayPicker.js"></script>
     <script>
     (function() {
@@ -45,7 +45,7 @@
     <div class="calendar">
       <div class="month-picker">
         <span
-          ng-class="{'month-selected':month.name==betterDayPicker.month}"
+          ng-class="{'month-selected': (month.monthNumber==betterDayPicker.month)}"
           ng-repeat="month in betterDayPicker.months" ng-click="betterDayPicker.setMonth(month.monthNumber)">
             {{month.name}}
             <span class="month-name">{{month.fullName}}</span>
