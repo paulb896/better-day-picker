@@ -1,7 +1,12 @@
 better-day-picker
 ==================
 
-Angular Day Picker
+Install with bower
+
+    bower install better-day-picker
+
+
+In html
 
     <html>
     ...
@@ -13,7 +18,7 @@ Angular Day Picker
 
     ...
 
-    <script src="angular.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
     <script src="betterDayPicker.js"></script>
 
     ...
