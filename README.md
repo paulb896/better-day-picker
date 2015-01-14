@@ -2,6 +2,7 @@ better-day-picker
 ==================
 
 Install with bower
+
     bower install better-day-picker
 
 
