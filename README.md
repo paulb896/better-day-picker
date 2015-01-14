@@ -6,6 +6,8 @@ Install with bower
     bower install better-day-picker
 
 
+In html
+
     <html>
     ...
     <link href="better-day-picker.css" rel="stylesheet" type="text/css" media="all">
